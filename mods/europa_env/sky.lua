@@ -1,7 +1,7 @@
 -- change sky params
 
 minetest.register_on_joinplayer(function(player)
-	sky_def = {
+	local sky_def = {
 		clouds = false,
 		sky_color = {
 			day_sky = "#000011",
@@ -18,12 +18,12 @@ minetest.register_on_joinplayer(function(player)
 	}
 	player:set_sky(sky_def)
 
-	jupiter_def = {
+	local jupiter_def = {
 		visible = true,
 	}
 	player:set_moon(jupiter_def)
 
-	stars_def = {
+	local stars_def = {
 		visible = true,
 		count = 5000,
 		day_opacity = 1.0,

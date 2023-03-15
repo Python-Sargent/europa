@@ -197,7 +197,7 @@ minetest.register_node("europa_nodes:water_flowing", {
 local default_charge = 600 -- if 600 should be 10 minutes of battery (1 second power draw)
 
 minetest.register_node("europa_nodes:electric_lamp", {
-	description = "Electric Lamp",
+	description = "Electric Lamp \n 600/600",
 	tiles = {
 		"europa_nodes_electric_lamp_top.png",
 		"europa_nodes_electric_lamp_top.png",
@@ -214,13 +214,15 @@ minetest.register_node("europa_nodes:electric_lamp", {
 		local meta = drops[1]:get_meta()
 		local om_charge = oldmeta.charge or default_charge
 		meta:set_int("charge", om_charge)
+		meta:set_string("description", "Electric Lamp\n"..tostring(om_charge).."/600")
 	end,
-	on_construct = function(pos)
+	after_place_node = function(pos, placer, itemstack, pointed_thing)
 		local meta = minetest.get_meta(pos)
-		local charge = meta:get_int("charge")
-		if charge == nil then
-			meta:set_int("charge", default_charge)
-		end
+		local itemstack_meta = itemstack:get_meta()
+		local previous_charge = itemstack_meta:contains("charge") and itemstack_meta:get_int("charge")
+		meta:set_int("charge", previous_charge or default_charge)
+		local timer = minetest.get_node_timer(pos)
+		timer:start(1) -- if 1, 1 second power draw (1 = 1 second delay)
 	end,
 	on_rightclick = function(pos)
 		minetest.swap_node(pos, {name="europa_nodes:electric_lamp_on"})
@@ -228,7 +230,7 @@ minetest.register_node("europa_nodes:electric_lamp", {
 })
 
 minetest.register_node("europa_nodes:electric_lamp_on", {
-	description = "Electric Lamp\ncharge: 10/10", -- reminiscent of old MTG descriptions
+	description = "Electric Lamp \n 600/600",
 	tiles = {
 		"europa_nodes_electric_lamp_top.png",
 		"europa_nodes_electric_lamp_top.png",
@@ -245,17 +247,15 @@ minetest.register_node("europa_nodes:electric_lamp_on", {
 	groups = {cracky = 3, melty = 3, handy = 3, not_in_creative_inventory = 1, chargeable_node = 1},
 	preserve_metadata = function(pos, oldnode, oldmeta, drops)
 		local meta = drops[1]:get_meta()
-		local om_charge = oldmeta.charge or default_charge
-		print("europa_nodes: preserve metadata charge is: "..tostring(om_charge)..". And node meta charge is "..tostring(oldmeta.charge))
+		local om_charge = oldmeta.charge
 		meta:set_int("charge", om_charge)
-		meta:set_string("description", "Electric Lamp\ncharge: "..tostring(om_charge).."/600")
+		meta:set_string("description", "Electric Lamp\n"..tostring(om_charge).."/600")
 	end,
-	on_construct = function(pos)
+	after_place_node = function(pos, placer, itemstack, pointed_thing)
 		local meta = minetest.get_meta(pos)
-		local charge = meta:get_int("charge")
-		if charge == nil then
-			meta:set_int("charge", default_charge)
-		end
+		local itemstack_meta = itemstack:get_meta()
+		local previous_charge = itemstack_meta:contains("charge") and itemstack_meta:get_int("charge")
+		meta:set_int("charge", previous_charge or default_charge)
 		local timer = minetest.get_node_timer(pos)
 		timer:start(1) -- if 1, 1 second power draw (1 = 1 second delay)
 	end,
