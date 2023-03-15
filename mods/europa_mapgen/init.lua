@@ -78,6 +78,82 @@ minetest.register_ore({
 
 minetest.register_ore({
 	ore_type        = "blob",
+	ore             = "europa_nodes:meteor_ice",
+	wherein         = {"europa_nodes:ice_hard", "europa_nodes:ice"},
+	clust_scarcity  = 12 * 12 * 12,
+	clust_size      = 12,
+	y_max           = 128,
+	y_min           = -31000,
+	noise_threshold = 0.0,
+	noise_params    = {
+		offset = 0.5,
+		scale = 0.2,
+		spread = {x = 5, y = 5, z = 5},
+		seed = -316,
+		octaves = 1,
+		persist = 0.0
+	},
+})
+
+minetest.register_ore({
+	ore_type        = "scatter",
+	ore             = "europa_nodes:meteor_chromium",
+	wherein         = {"europa_nodes:meteor_ice"},
+	clust_scarcity  = 3 * 3 * 3,
+	clust_size      = 2,
+	y_max           = 128,
+	y_min           = -31000,
+	noise_threshold = 0.0,
+	noise_params    = {
+		offset = 0.5,
+		scale = 0.2,
+		spread = {x = 5, y = 5, z = 5},
+		seed = -316,
+		octaves = 1,
+		persist = 0.0
+	},
+})
+
+minetest.register_ore({
+	ore_type        = "scatter",
+	ore             = "europa_nodes:meteor_platinum",
+	wherein         = {"europa_nodes:meteor_ice"},
+	clust_scarcity  = 3 * 3 * 3,
+	clust_size      = 2,
+	y_max           = 128,
+	y_min           = -31000,
+	noise_threshold = 0.0,
+	noise_params    = {
+		offset = 0.5,
+		scale = 0.2,
+		spread = {x = 5, y = 5, z = 5},
+		seed = -316,
+		octaves = 1,
+		persist = 0.0
+	},
+})
+
+minetest.register_ore({
+	ore_type        = "scatter",
+	ore             = "europa_nodes:meteor_titanium",
+	wherein         = {"europa_nodes:meteor_ice"},
+	clust_scarcity  = 3 * 3 * 3,
+	clust_size      = 2,
+	y_max           = 128,
+	y_min           = -31000,
+	noise_threshold = 0.0,
+	noise_params    = {
+		offset = 0.5,
+		scale = 0.2,
+		spread = {x = 5, y = 5, z = 5},
+		seed = -316,
+		octaves = 1,
+		persist = 0.0
+	},
+})
+
+minetest.register_ore({
+	ore_type        = "blob",
 	ore             = "europa_nodes:core_iron",
 	wherein         = {"europa_nodes:core_iron_nickel"},
 	clust_scarcity  = 16 * 16 * 16,

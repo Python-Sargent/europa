@@ -95,6 +95,40 @@ minetest.register_node("europa_nodes:core_iron_nickel", {
 	groups = {cracky = 1, melty = 1}
 })
 
+-- meteorites
+
+minetest.register_node("europa_nodes:meteor_platinum", {
+	description = "Platinum Meteor Rock",
+	tiles = {"europa_nodes_meteor_platinum.png"},
+	paramtype = "light",
+	is_ground_content = true,
+	groups = {cracky = 1, melty = 1}
+})
+
+minetest.register_node("europa_nodes:meteor_chromium", {
+	description = "Chromium Meteor Rock",
+	tiles = {"europa_nodes_meteor_chromium.png"},
+	paramtype = "light",
+	is_ground_content = true,
+	groups = {cracky = 1, melty = 1}
+})
+
+minetest.register_node("europa_nodes:meteor_titanium", { -- FIXME is this really in meteors?
+	description = "Titanium Meteor Rock",
+	tiles = {"europa_nodes_meteor_titanium.png"},
+	paramtype = "light",
+	is_ground_content = true,
+	groups = {cracky = 1, melty = 1}
+})
+
+minetest.register_node("europa_nodes:meteor_ice", {
+	description = "Meteor Rock",
+	tiles = {"europa_nodes_meteor_ice.png"},
+	paramtype = "light",
+	is_ground_content = true,
+	groups = {cracky = 1, melty = 1}
+})
+
 --
 -- Liquids
 --
