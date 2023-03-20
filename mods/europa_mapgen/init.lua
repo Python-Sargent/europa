@@ -80,15 +80,15 @@ minetest.register_ore({
 	ore_type        = "blob",
 	ore             = "europa_nodes:meteor_ice",
 	wherein         = {"europa_nodes:ice_hard", "europa_nodes:ice"},
-	clust_scarcity  = 12 * 12 * 12,
+	clust_scarcity  = 64 * 64 * 64,
 	clust_size      = 12,
 	y_max           = 128,
 	y_min           = -31000,
 	noise_threshold = 0.0,
 	noise_params    = {
 		offset = 0.5,
-		scale = 0.2,
-		spread = {x = 5, y = 5, z = 5},
+		scale = 0.016,
+		spread = {x = 32, y = 32, z = 32},
 		seed = -316,
 		octaves = 1,
 		persist = 0.0

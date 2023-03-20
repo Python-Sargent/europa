@@ -84,7 +84,7 @@ minetest.register_craftitem("europa_items:nickel_steel_ingot", {
 
 minetest.register_tool("europa_items:drill_silicate", {
 	description = S("Silicate Drill"),
-	inventory_image = "europa_items_tool_drill_silicate.png",
+	inventory_image = "europa_items_drill_silicate.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=0,
@@ -99,7 +99,7 @@ minetest.register_tool("europa_items:drill_silicate", {
 
 minetest.register_tool("europa_items:drill_nickel", {
 	description = S("Nickel Drill"),
-	inventory_image = "europa_items_tool_drill_nickel.png",
+	inventory_image = "europa_items_drill_nickel.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=0,
@@ -114,7 +114,7 @@ minetest.register_tool("europa_items:drill_nickel", {
 
 minetest.register_tool("europa_items:drill_iron", {
 	description = S("Iron Drill"),
-	inventory_image = "europa_items_tool_drill_iron.png",
+	inventory_image = "europa_items_drill_iron.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=0,
@@ -129,7 +129,7 @@ minetest.register_tool("europa_items:drill_iron", {
 
 minetest.register_tool("europa_items:drill_steel", {
 	description = S("Steel Drill"),
-	inventory_image = "europa_items_tool_drill_steel.png",
+	inventory_image = "europa_items_drill_steel.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=0,
@@ -144,7 +144,7 @@ minetest.register_tool("europa_items:drill_steel", {
 
 minetest.register_tool("europa_items:drill_nickel_steel", {
 	description = S("Nickel Steel Drill"),
-	inventory_image = "europa_items_tool_drill_nickel_steel.png",
+	inventory_image = "europa_items_drill_nickel_steel.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
 		max_drop_level=0,

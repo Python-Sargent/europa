@@ -32,7 +32,7 @@ end
 europa_lore.register_rover = function(number)
 	minetest.register_node("europa_lore:ruins_rover_"..tostring(number), {
 		description = "Ruined Rover",
-		tiles = "europa_lore_ruins_rover_"..tostring(number)..".png",
+		tiles = "europa_lore_ruined_rover_"..tostring(number)..".png",
 		drawtype = "mesh",
 		mesh = "ruined_rover_"..tostring(number)..".obj",
 		paramtype = "light",
@@ -40,9 +40,9 @@ europa_lore.register_rover = function(number)
 		drop = {
 			max_items = 4,
 			items = {
-				{items = {"europa_items:steel_ingot"}, rarity = 32},
-				{items = {"europa_items:iron_ingot"}, rarity = 24},
-				{items = {"europa_items:nickel_ingot"}, rarity = 16},
+				{items = {"europa_items:steel_ingot"}, rarity = 8},
+				{items = {"europa_items:iron_ingot"}, rarity = 4},
+				{items = {"europa_items:nickel_ingot"}, rarity = 2},
 			}
 		},
 		groups = {cracky=1, not_in_creative_inventory=1, melty=1},
@@ -58,7 +58,7 @@ europa_lore.register_rover = function(number)
 		sidelen = 16,
 		noise_params = {
 			offset = -0.012,
-			scale = 0.016 / (number + 1), 
+			scale = 0.008 / (number + 1), 
 			spread = {x = 100, y = 100, z = 100},
 			seed = 230,
 			octaves = 3,
@@ -73,7 +73,11 @@ end
 europa_lore.register_scanner = function(number)
 	minetest.register_node("europa_lore:ruins_scanner_"..tostring(number), {
 		description = "Crashed Orbital Scanner",
-		tiles = "europa_lore_ruins_scanner_"..tostring(number)..".png",
+		tiles = {
+			"europa_lore_ruined_scanner_"..tostring(number).."_panel.png",
+			"europa_lore_ruined_scanner_"..tostring(number).."_body.png",
+			"europa_lore_ruined_scanner_"..tostring(number).."_relay.png",
+		},
 		drawtype = "mesh",
 		mesh = "ruined_scanner_"..tostring(number)..".obj",
 		paramtype = "light",
@@ -81,9 +85,9 @@ europa_lore.register_scanner = function(number)
 		drop = {
 			max_items = 4,
 			items = {
-				{items = {"europa_items:steel_ingot"}, rarity = 16},
-				{items = {"europa_items:iron_ingot"}, rarity = 34},
-				{items = {"europa_items:nickel_ingot"}, rarity = 32},
+				{items = {"europa_items:steel_ingot"}, rarity = 2},
+				{items = {"europa_items:iron_ingot"}, rarity = 8},
+				{items = {"europa_items:nickel_ingot"}, rarity = 4},
 			}
 		},
 		groups = {cracky=1, not_in_creative_inventory=1, melty=1},
@@ -99,7 +103,7 @@ europa_lore.register_scanner = function(number)
 		sidelen = 16,
 		noise_params = {
 			offset = -0.012,
-			scale = 0.016 / (number + 1),
+			scale = 0.008 / (number + 1),
 			spread = {x = 100, y = 100, z = 100},
 			seed = 230,
 			octaves = 3,
@@ -114,7 +118,11 @@ end
 europa_lore.register_lander = function(number)
 	minetest.register_node("europa_lore:ruins_lander_"..tostring(number), {
 		description = "Crashed Lander",
-		tiles = "europa_lore_ruins_lander_"..tostring(number)..".png",
+		tiles = {
+			"europa_lore_ruined_lander_"..tostring(number).."_computer.png",
+			"europa_lore_ruined_lander_"..tostring(number).."_body.png",
+			"europa_lore_ruined_lander_"..tostring(number).."_accent.png",
+		},
 		drawtype = "mesh",
 		mesh = "ruined_lander_"..tostring(number)..".obj",
 		paramtype = "light",
@@ -122,9 +130,9 @@ europa_lore.register_lander = function(number)
 		drop = {
 			max_items = 4,
 			items = {
-				{items = {"europa_items:steel_ingot"}, rarity = 24},
-				{items = {"europa_items:iron_ingot"}, rarity = 32},
-				{items = {"europa_items:nickel_ingot"}, rarity = 16},
+				{items = {"europa_items:steel_ingot"}, rarity = 4},
+				{items = {"europa_items:iron_ingot"}, rarity = 8},
+				{items = {"europa_items:nickel_ingot"}, rarity = 2},
 			}
 		},
 		groups = {cracky=1, not_in_creative_inventory=1, melty=1},
@@ -140,7 +148,7 @@ europa_lore.register_lander = function(number)
 		sidelen = 16,
 		noise_params = {
 			offset = -0.012,
-			scale = 0.016 / (number + 1),
+			scale = 0.008 / (number + 1),
 			spread = {x = 100, y = 100, z = 100},
 			seed = 230,
 			octaves = 3,
@@ -155,7 +163,7 @@ end
 europa_lore.register_other = function(number)
 	minetest.register_node("europa_lore:ruins_other_"..tostring(number), {
 		description = "Ruined Object",
-		tiles = "europa_lore_ruins_other_"..tostring(number)..".png",
+		tiles = "europa_lore_ruined_other_"..tostring(number)..".png",
 		drawtype = "mesh",
 		mesh = "ruined_other_"..tostring(number)..".obj",
 		paramtype = "light",
@@ -163,9 +171,9 @@ europa_lore.register_other = function(number)
 		drop = {
 			max_items = 4,
 			items = {
-				{items = {"europa_items:steel_ingot"}, rarity = 32},
-				{items = {"europa_items:iron_ingot"}, rarity = 32},
-				{items = {"europa_items:nickel_ingot"}, rarity = 32},
+				{items = {"europa_items:steel_ingot"}, rarity = 4},
+				{items = {"europa_items:iron_ingot"}, rarity = 4},
+				{items = {"europa_items:nickel_ingot"}, rarity = 4},
 			}
 		},
 		groups = {cracky=1, not_in_creative_inventory=1, melty=1},
@@ -181,7 +189,7 @@ europa_lore.register_other = function(number)
 		sidelen = 16,
 		noise_params = {
 			offset = -0.012,
-			scale = 0.016 / (number + 1),
+			scale = 0.008 / (number + 1),
 			spread = {x = 100, y = 100, z = 100},
 			seed = 230,
 			octaves = 3,
@@ -243,7 +251,8 @@ europa_lore.info = { --this is actually all true, part of it is from wikipedia, 
 
 	jupiter = "The fith planet in the system of Sol; this planet has the largest number of moons in the entire system of Sol."..
 			"This planet is home to some of the most destructive dust storms in the galaxy as we know it."..
-			"The atmoshpere is composed of many different substances, including argon; which is a dangerous chemical that is heavier than oxygen, hydrogen, and nitrogen", -- and helium of course :)
+			"The atmoshpere is composed of many different substances, including argon; which is a dangerous chemical"..
+			"usually in gas or vapor form that is heavier than oxygen, hydrogen, and nitrogen", -- and helium of course :)
 }
 
 

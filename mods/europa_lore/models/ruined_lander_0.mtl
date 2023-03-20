@@ -1,0 +1,32 @@
+# Blender 3.4.1 MTL File: 'ruined_lander_0.blend'
+# www.blender.org
+
+newmtl accent
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/samuel/mod_magma/textures/magma_ash.png
+
+newmtl body
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/samuel/mod_magma/textures/magma_pumice.png
+
+newmtl computer
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/samuel/mod_magma/textures/magma_lava_hot.png
