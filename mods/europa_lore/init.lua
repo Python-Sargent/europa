@@ -32,7 +32,11 @@ end
 europa_lore.register_rover = function(number)
 	minetest.register_node("europa_lore:ruins_rover_"..tostring(number), {
 		description = "Ruined Rover",
-		tiles = "europa_lore_ruined_rover_"..tostring(number)..".png",
+		tiles = {
+			"europa_lore_ruined_rover_"..tostring(number).."_body.png",
+			"europa_lore_ruined_rover_"..tostring(number).."_accent.png",
+			"europa_lore_ruined_rover_"..tostring(number).."_underlay.png",
+		},
 		drawtype = "mesh",
 		mesh = "ruined_rover_"..tostring(number)..".obj",
 		paramtype = "light",

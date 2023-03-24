@@ -2,7 +2,7 @@
 --------------------------------------------------------------
 
 local mg_name = minetest.get_mapgen_setting("mg_name")
-if mg_name == "???????" or mg_name == "singlenode" or -- TODO FIXME
+if mg_name == "mv6" or mg_name == "singlenode" or
 		minetest.settings:get("static_spawnpoint") or
 		minetest.settings:get_bool("engine_spawn") then
 	return
@@ -24,7 +24,7 @@ local pos = {x = 0, y = 8, z = 0}
 -- Table of suitable biomes
 
 local biome_ids = {
-	minetest.get_biome_id("ice_floor"), --FIXME TODO
+	minetest.get_biome_id("ice_floor"),
 }
 
 -- End of parameters
@@ -121,6 +121,16 @@ end
 -- position and reposition players, otherwise leave them at engine spawn
 -- position.
 
+local items = {
+	"europa_items:drill_steel",
+	"europa_items:space_rations 10",
+	"europa_nodes:electric_lamp",
+	"europa_items:battery_charged 5",
+	"europa_items:tool_housing 2",
+	"europa_nodes:refiner 2",
+	"europa_nodes:battery"
+}
+
 local function on_spawn(player)
 	if not searched then
 		success = search()
@@ -129,24 +139,21 @@ local function on_spawn(player)
 	if success then
 		player:set_pos(spawn_pos)
 	end
+	minetest.log("action",
+			"Giving start stuff to player " .. player:get_player_name())
+	local inv = player:get_inventory()
+	for _, stack in ipairs(items) do
+		inv:add_item("main", stack)
+	end
 	return success
 end
 
 minetest.register_on_newplayer(function(player)
 	on_spawn(player)
+	local pos = player:get_pos()
+	minetest.set_node({x=pos.x + 1, y=pos.y, z=pos.z - 1}, {name="europa_nodes:lander"})
 end)
 
-local enable_bed_respawn = minetest.settings:get_bool("enable_bed_respawn")
-if enable_bed_respawn == nil then
-	enable_bed_respawn = true
-end
-
 minetest.register_on_respawnplayer(function(player)
-	-- Avoid respawn conflict with beds mod
-	if beds and enable_bed_respawn and
-			beds.spawn[player:get_player_name()] then
-		return
-	end
-
 	return on_spawn(player)
 end)

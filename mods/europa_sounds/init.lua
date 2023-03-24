@@ -25,7 +25,7 @@ function europa_sounds.node_sound_stone_defaults(table)
 	return table
 end
 
-function europa_sounds.node_sound_dirt_defaults(table)
+function europa_sounds.node_sound_soil_defaults(table)
 	table = table or {}
 	table.footstep = table.footstep or
 			{name = "europa_nodes_dirt_footstep", gain = 0.25}
@@ -65,7 +65,7 @@ function europa_sounds.node_sound_gravel_defaults(table)
 	return table
 end
 
-function europa_sounds.node_sound_wood_defaults(table)
+function europa_sounds.node_sound_hollow_defaults(table)
 	table = table or {}
 	table.footstep = table.footstep or
 			{name = "europa_nodes_wood_footstep", gain = 0.15}
@@ -73,18 +73,6 @@ function europa_sounds.node_sound_wood_defaults(table)
 			{name = "europa_nodes_dig_choppy", gain = 0.4}
 	table.dug = table.dug or
 			{name = "europa_nodes_wood_footstep", gain = 1.0}
-	europa_sounds.node_sound_defaults(table)
-	return table
-end
-
-function europa_sounds.node_sound_leaves_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "europa_nodes_grass_footstep", gain = 0.45}
-	table.dug = table.dug or
-			{name = "europa_nodes_grass_footstep", gain = 0.7}
-	table.place = table.place or
-			{name = "europa_nodes_place_node", gain = 1.0}
 	europa_sounds.node_sound_defaults(table)
 	return table
 end
@@ -127,7 +115,7 @@ function europa_sounds.node_sound_metal_defaults(table)
 	return table
 end
 
-function europa_sounds.node_sound_water_defaults(table)
+function europa_sounds.node_sound_liquid_defaults(table)
 	table = table or {}
 	table.footstep = table.footstep or
 			{name = "europa_nodes_water_footstep", gain = 0.2}
@@ -135,7 +123,7 @@ function europa_sounds.node_sound_water_defaults(table)
 	return table
 end
 
-function europa_sounds.node_sound_snow_defaults(table)
+function europa_sounds.node_sound_crunchy_defaults(table)
 	table = table or {}
 	table.footstep = table.footstep or
 			{name = "europa_nodes_snow_footstep", gain = 0.2}

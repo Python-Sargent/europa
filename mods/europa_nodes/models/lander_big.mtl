@@ -1,0 +1,42 @@
+# Blender 3.4.1 MTL File: 'lander_big.blend'
+# www.blender.org
+
+newmtl accent
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/samuel/Minetest/games/europa/mods/europa_nodes/textures/europa_nodes_hard_ice.png
+
+newmtl body
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/samuel/europa/mods/europa_nodes/textures/europa_nodes_core_nickel.png
+
+newmtl thruster
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/samuel/Minetest/games/europa/mods/europa_nodes/textures/europa_nodes_silicate.png
+
+newmtl windows
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/samuel/Minetest-Mods/electrical_age/textures/eln_wire.png
