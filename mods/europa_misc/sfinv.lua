@@ -44,18 +44,10 @@ function europa_misc_inv.get_nav_fs(player, context, nav, current_idx)
 	end
 end
 
-local theme_inv = [[
-		image[0,5.2;1,1;gui_hb_bg.png]
-		image[1,5.2;1,1;gui_hb_bg.png]
-		image[2,5.2;1,1;gui_hb_bg.png]
-		image[3,5.2;1,1;gui_hb_bg.png]
-		image[4,5.2;1,1;gui_hb_bg.png]
-		image[5,5.2;1,1;gui_hb_bg.png]
-		image[6,5.2;1,1;gui_hb_bg.png]
-		image[7,5.2;1,1;gui_hb_bg.png]
-		list[current_player;main;0,5.2;8,1;]
-		list[current_player;main;0,6.35;8,3;8]
-	]]
+local theme_inv =
+		"list[current_player;main;0,5.2;8,1;]" ..
+		"list[current_player;main;0,6.35;8,3;8]"..
+		europa_misc.get_hotbar_bg(0,5.2)
 
 function europa_misc_inv.make_formspec(player, context, content, show_inv, size)
 	local tmp = {
@@ -205,13 +197,13 @@ end)
 europa_misc_inv.register_page("europa_misc_inv:crafting", {
 	title = S("Crafting"),
 	get = function(self, player, context)
-		return europa_misc_inv.make_formspec(player, context, [[
-				list[current_player;craft;1.75,0.5;3,3;]
-				list[current_player;craftpreview;5.75,1.5;1,1;]
-				image[4.75,1.5;1,1;europa_misc_inv_crafting_arrow.png]
-				listring[current_player;main]
-				listring[current_player;craft]
-			]], true)
+		return europa_misc_inv.make_formspec(player, context,
+				"list[current_player;craft;1.75,0.5;3,3;]" ..
+				"list[current_player;craftpreview;5.75,1.5;1,1;]" ..
+				"image[4.75,1.5;1,1;europa_misc_inv_crafting_arrow.png]" ..
+				"listring[current_player;main]" ..
+				"listring[current_player;craft]" ..
+				europa_misc.get_hotbar_bg(0,5.2), true)
 	end
 })
 

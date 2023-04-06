@@ -42,7 +42,7 @@ end)
 --
 
 europa_nodes.charge_replacments = {
-	[""] = "europa_nodes:AAAAARGHGH",
+	[""] = "empty item",
 	["europa_items:battery"] = "europa_items:battery_charged",
 	["europa_items:battery_dead"] = "europa_items:battery_charged",
 	["europa_nodes:battery_dead"] = "europa_nodes:battery_charged",
@@ -58,22 +58,20 @@ europa_nodes.charge_replacments = {
 
 europa_nodes.lander.on_timer = function(pos)
 	local meta = minetest.get_meta(pos)
-	local charge = meta:get_int("charge") -- charge means both the amount of power stored and the inventory that charges items
+	local charge = meta:get_int("charge") -- charge means the amount of power stored, charge_inv means the charging inventory that charges things
 	if charge < 100 then
 		meta:set_int("charge", charge + 1) -- increase charge
 	end
 	local inv = meta:get_inventory()
 	if charge > 0 then
-		local charge_stack = inv:get_stack(charge, -1)
-		local i = 0
-		while charge_stack:get_name() == "" and i < 64 do
-			local charge_stack = inv:get_stack(charge, i)
-			minetest.chat_send_all(tostring(i))
-			i = i + 1
-		end
+		local charge_stack = inv:get_stack("charge_inv", 0) -- FIXME this is nothing, why?
 		minetest.chat_send_all(tostring(europa_nodes.charge_replacments[charge_stack:get_name()]))
 		minetest.chat_send_all(tostring(charge_stack:get_name()))
-		inv:set_stack("charge_inv", 0, ItemStack(tostring(europa_nodes.charge_replacments[charge_stack:get_name()])))
+		minetest.chat_send_all(tostring(charge_stack))
+		minetest.chat_send_all(type(charge_stack))
+		minetest.chat_send_all(type(charge_stack:get_name()))
+		inv:set_stack("charge_inv", 0, ItemStack(tostring(europa_nodes.charge_replacments[charge_stack:get_name()]))) -- FIXME why is this not working?
+		meta:set_int("charge", charge - 20) -- decrease charge
 	end
 	return true
 end

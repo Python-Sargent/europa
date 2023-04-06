@@ -10,3 +10,5 @@ Sounds temporarily from the default mod in MTG (Minetest Game):
 
 exceptions:
 	None
+
+license for sounds can be found in the license.txt

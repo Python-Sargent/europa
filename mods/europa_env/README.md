@@ -61,3 +61,6 @@ Media is all not original.
 
  code and media not mentioned:
 	(C) 2023, SuperStarSonic, Samuel Sargent (Python-Sargent): Textures, Code
+
+
+The license is contained in the license.txt

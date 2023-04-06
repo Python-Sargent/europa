@@ -1,0 +1,31 @@
+
+This license is for the code derived from the stamina mod by sofar. (this mod falls under the umbrella game license)
+
+GNU LESSER GENERAL PUBLIC LICENSE
+
+Version 2.1, February 1999
+
+Copyright (C) 1991, 1999 Free Software Foundation, Inc.
+51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+
+[This is the first released version of the Lesser GPL.  It also counts
+ as the successor of the GNU Library Public License, version 2, hence
+ the version number 2.1.]
+
+
+Code:
+- all code LGPL-2.1+
+
+Textures:
+- stamina_hud_poison.png - BlockMen (CC-BY 3.0)
+- stamina_hud_fg.png - PilzAdam (WTFPL), modified by BlockMen
+- stamina_hud_bg.png - PilzAdam (WTFPL), modified by BlockMen
+
+Sounds (CC-BY-3.0):
+- stamina_eat.*.ogg - http://www.freesound.org/people/sonictechtonic/sounds/242215/
+- stamina_burp.ogg - https://www.freesfx.co.uk/sfx/burp (small burp)
+
+Sounds (Attribution 3.0):
+- stamina_sip.ogg - https://freesound.org/people/Stevious42/sounds/259640/
