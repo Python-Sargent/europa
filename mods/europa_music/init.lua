@@ -1,5 +1,3 @@
--- music down loaded free from Pixabay, thanks to pixabay for the music in this mod.
-
 europa_music = {}
 
 europa_music.nostop = {

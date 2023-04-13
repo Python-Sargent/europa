@@ -1,6 +1,19 @@
 
 This license is for the code derived from the stamina mod by sofar. (this mod falls under the umbrella game license)
 
+------------------------------------------
+
+CREATIVE COMMONS ATTRIBUTION 3.0
+
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). 
+THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. 
+TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+
+------------------------------------------
+
 GNU LESSER GENERAL PUBLIC LICENSE
 
 Version 2.1, February 1999
@@ -14,18 +27,19 @@ of this license document, but changing it is not allowed.
  as the successor of the GNU Library Public License, version 2, hence
  the version number 2.1.]
 
+------------------------------------------
 
 Code:
 - all code LGPL-2.1+
 
 Textures:
-- stamina_hud_poison.png - BlockMen (CC-BY 3.0)
-- stamina_hud_fg.png - PilzAdam (WTFPL), modified by BlockMen
-- stamina_hud_bg.png - PilzAdam (WTFPL), modified by BlockMen
+- eueopa_env_hud_poison.png - SuperStarSonic (CC-BY 3.0)
+- eueopa_env_fg.png - SuperStarSonic
+- eueopa_env_bg.png - SuperStarSonic
 
 Sounds (CC-BY-3.0):
-- stamina_eat.*.ogg - http://www.freesound.org/people/sonictechtonic/sounds/242215/
-- stamina_burp.ogg - https://www.freesfx.co.uk/sfx/burp (small burp)
+- eueopa_env_eat.*.ogg - http://www.freesound.org/people/sonictechtonic/sounds/242215/
+- eueopa_env_burp.ogg - https://www.freesfx.co.uk/sfx/burp (small burp)
 
 Sounds (Attribution 3.0):
-- stamina_sip.ogg - https://freesound.org/people/Stevious42/sounds/259640/
+- eueopa_env_sip.ogg - https://freesound.org/people/Stevious42/sounds/259640/
