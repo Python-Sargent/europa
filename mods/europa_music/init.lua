@@ -1,6 +1,6 @@
 europa_music = {}
 
-europa_music.nostop = {
+--[[europa_music.nostop = {
 	track = "europa_music_track",
 	track_delay = 600 --default 60 (10 min)
 }
@@ -14,4 +14,4 @@ europa_music.load_start_delay = 300 --default 300 (5 min)
 
 minetest.register_on_mods_loaded(function()
 	minetest.after(europa_music.load_start_delay, europa_music.play_track_nostop)
-end)
+end)]]
